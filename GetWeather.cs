@@ -11,14 +11,14 @@ namespace DesktopWeatherApp
 {
     class GetWeather
     {
-        public static string apiKey = " ";
+        public static string apiKey = "";
         
         public static List<List<string>> GetWeatherForcast(List<string> location)
         {
             string lat = location[0];
             string lon = location[1];
 
-            //Call to API to get daily forecase using latitude and longitude that are passed in from form1
+            //Call to API to get daily forecast using latitude and longitude that are passed in from form1
             var client = new RestClient("http://api.weatherbit.io/v2.0/forecast/daily?lat=" + lat + "&lon=" + lon + "&key=" + apiKey);
 
             var request = new RestRequest(Method.GET);

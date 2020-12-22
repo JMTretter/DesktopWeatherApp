@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnDaily = new System.Windows.Forms.Button();
             this.btnHourly = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // btnDaily
@@ -52,6 +55,16 @@
             this.btnHourly.UseVisualStyleBackColor = true;
             this.btnHourly.Click += new System.EventHandler(this.btnHourly_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.BalloonTipText = "Local Weather";
+            this.notifyIcon1.BalloonTipTitle = "Weather";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Local Weather";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -70,6 +83,7 @@
         #endregion
         private System.Windows.Forms.Button btnDaily;
         private System.Windows.Forms.Button btnHourly;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

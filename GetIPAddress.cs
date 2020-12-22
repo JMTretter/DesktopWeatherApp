@@ -19,7 +19,7 @@ namespace DesktopWeatherApp
             //List that hold user's latitude and longitude
             List<string> loc = new List<string>();
 
-            string ipApiKey = " ";
+            string ipApiKey = "";
 
             //string to store user's IP address
             string publicIPAddress = new WebClient().DownloadString("http://icanhazip.com");
